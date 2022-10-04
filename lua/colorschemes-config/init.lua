@@ -14,4 +14,8 @@ require("gruvbox").setup({
     }
 })
 
+require("notify").setup({
+  background_colour = "#000000",
+})
+
 vim.cmd("colorscheme gruvbox")
