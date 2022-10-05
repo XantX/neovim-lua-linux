@@ -15,6 +15,6 @@ set.tabstop = 2
 set.shiftwidth = 2
 set.softtabstop = 2
 set.expandtab = true
-set.autochdir = true
+--set.autochdir = true
 set.wildmenu = true
 set.clipboard = 'unnamedplus'
