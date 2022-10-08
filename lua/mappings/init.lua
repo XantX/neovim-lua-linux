@@ -22,10 +22,7 @@ map('n', '<M-h>', ':vertical resize -2<CR>', opts)
 map('n', '<M-l>', ':vertical resize +2<CR>', opts)
 map('n', '<leader>vs', ':vsp <CR>', opts)
 -- Terminal
-map('n', '<leader>t', ':ToggleTerm <CR>', opts)
 map('n', '<leader>th', ':ToggleTerm direction=horizontal <CR>', opts)
-map('n', '<leader>tv', ':ToggleTerm direction=vertical <CR>', opts)
-map('n', '<leader>tf', ':ToggleTerm direction=float <CR>', opts)
 map('t', '<Esc>', '<C-\\><C-n>', opts)
 
 -- Telescope mappings
