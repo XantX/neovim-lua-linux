@@ -26,7 +26,8 @@ local servers = {
 	"tsserver",
 	"pylsp",
   "html",
-  "marksman"
+  "marksman",
+  "gopls"
 }
 
 -- Add additional capabilities supported by nvim-cmp
