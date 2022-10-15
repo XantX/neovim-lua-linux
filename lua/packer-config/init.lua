@@ -15,10 +15,13 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'ellisonleao/gruvbox.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
+  use {'kyazdani42/nvim-tree.lua', cmd="NvimTreeToggle" ,config="require('nvim-tree-config')"}
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
-  use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
   use 'romgrk/barbar.nvim'
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
@@ -33,7 +36,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'nvim-lualine/lualine.nvim'
+  use {'nvim-lualine/lualine.nvim', event="BufWinEnter", config="require('lua-line-config')"}
   use {
     'lewis6991/gitsigns.nvim',
   }
