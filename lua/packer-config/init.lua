@@ -13,6 +13,11 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  -- debugging
+  use 'mfussenegger/nvim-dap'
+  use 'leoluz/nvim-dap-go'
+  use { "rcarriga/nvim-dap-ui" }
+  use 'theHamsta/nvim-dap-virtual-text'
   use 'ellisonleao/gruvbox.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use {'kyazdani42/nvim-tree.lua', cmd="NvimTreeToggle" ,config="require('nvim-tree-config')"}
