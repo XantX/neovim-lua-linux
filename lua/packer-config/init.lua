@@ -1,8 +1,8 @@
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -20,10 +20,10 @@ return require('packer').startup(function(use)
   use 'theHamsta/nvim-dap-virtual-text'
   use 'ellisonleao/gruvbox.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use {'kyazdani42/nvim-tree.lua', cmd="NvimTreeToggle" ,config="require('nvim-tree-config')"}
+  use { 'kyazdani42/nvim-tree.lua', cmd = "NvimTreeToggle", config = "require('nvim-tree-config')" }
   use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
   }
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
@@ -32,6 +32,21 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup({
+        toggler = {
+          line = 'gcc',
+          block = 'gbc',
+        },
+        mappings = {
+          basic = true,
+          extra = false,
+        },
+      })
+    end
+  }
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'rafamadriz/friendly-snippets'
@@ -39,9 +54,9 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
-  use {'nvim-lualine/lualine.nvim', event="BufWinEnter", config="require('lua-line-config')"}
+  use { 'nvim-lualine/lualine.nvim', event = "BufWinEnter", config = "require('lua-line-config')" }
   use {
     'lewis6991/gitsigns.nvim',
   }
@@ -51,7 +66,8 @@ return require('packer').startup(function(use)
   use 'kylechui/nvim-surround'
   use 'rcarriga/nvim-notify'
   use 'akinsho/toggleterm.nvim'
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
