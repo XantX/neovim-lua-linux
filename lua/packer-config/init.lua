@@ -18,17 +18,31 @@ return require('packer').startup(function(use)
   use 'leoluz/nvim-dap-go'
   use { "rcarriga/nvim-dap-ui" }
   use 'theHamsta/nvim-dap-virtual-text'
+
   use 'ellisonleao/gruvbox.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use { 'kyazdani42/nvim-tree.lua', cmd = "NvimTreeToggle", config = "require('nvim-tree-config')" }
+  use { 'kyazdani42/nvim-tree.lua',
+    config = "require('nvim-tree-config')",
+    cmd = {
+      'NvimTreeClipboard',
+      'NvimTreeClose',
+      'NvimTreeFindFile',
+      'NvimTreeOpen',
+      'NvimTreeRefresh',
+      'NvimTreeToggle',
+    },
+    event = 'VimEnter' }
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+
   use { 'williamboman/mason.nvim' }
-  use 'williamboman/mason-lspconfig.nvim'
-  use 'neovim/nvim-lspconfig'
-  -- use 'williamboman/nvim-lsp-installer'
+  use { 'williamboman/mason-lspconfig.nvim'}
+  use {'neovim/nvim-lspconfig', config = function ()
+   require('lsp-config.language-server')
+  end,
+event = 'BufWinEnter'}
   use 'romgrk/barbar.nvim'
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
@@ -47,7 +61,8 @@ return require('packer').startup(function(use)
           extra = false,
         },
       })
-    end
+    end,
+    event = "BufWinEnter"
   }
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -56,7 +71,11 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { { 'nvim-lua/plenary.nvim' } }
+    requires = { { 'nvim-lua/plenary.nvim' } },
+    event = "BufWinEnter",
+    config = function()
+      require('telescope-config')
+    end
   }
   use { 'nvim-lualine/lualine.nvim', event = "BufWinEnter", config = "require('lua-line-config')" }
   use {
