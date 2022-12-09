@@ -25,7 +25,8 @@ local servers = {
 	"pyright",
   "html",
   "marksman",
-  "gopls"
+  "gopls",
+  "eslint"
 }
 
 -- Add additional capabilities supported by nvim-cmp

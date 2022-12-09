@@ -16,6 +16,8 @@ return require('packer').startup(function(use)
   -- debugging
   use 'mfussenegger/nvim-dap'
   use 'leoluz/nvim-dap-go'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
   use { "rcarriga/nvim-dap-ui" }
   use 'theHamsta/nvim-dap-virtual-text'
 
