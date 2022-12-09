@@ -78,9 +78,7 @@ event = 'BufWinEnter'}
     end
   }
   use { 'nvim-lualine/lualine.nvim', event = "BufWinEnter", config = "require('lua-line-config')" }
-  use {
-    'lewis6991/gitsigns.nvim',
-  }
+  use {'lewis6991/gitsigns.nvim',}
   use 'glepnir/lspsaga.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'

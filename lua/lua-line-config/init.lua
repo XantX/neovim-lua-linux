@@ -32,9 +32,9 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = { 'mode' },
-    lualine_b = { { 'b:gitsigns_head', icon = '' }, { 'diff', source = diff_source }, 'diagnostics' },
-    lualine_c = { 'filename' },
-    lualine_x = { 'filetype' },
+    lualine_b = { { 'b:gitsigns_head', icon = '' }, { 'diff', source = diff_source } },
+    lualine_c = { {'filename', file_status = true, path = 0 } },
+    lualine_x = { 'filetype', { 'diagnostics', sources = { 'nvim_diagnostic'} } },
     lualine_y = { 'location' },
     lualine_z = {}
   },
