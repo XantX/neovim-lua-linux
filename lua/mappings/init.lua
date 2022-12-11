@@ -11,6 +11,7 @@ map('n', '<leader>w', ':w<CR>', opts)
 -- Barbar mappings
 map('n', '<leader>ne', ':BufferNext<CR>', opts)
 map('n', '<leader>pe', ':BufferPrevious<CR>', opts)
+map('n', '<leader>,', ':setlocal spell!<CR>', opts)
 map('n', '<leader>mn', ':BufferMoveNext<CR>', opts)
 map('n', '<leader>mp', ':BufferMovePrevious<CR>', opts)
 map('n', '<leader>B', ':BufferPick<CR>', opts)

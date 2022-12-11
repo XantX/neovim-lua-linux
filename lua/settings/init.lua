@@ -3,6 +3,7 @@ vim.cmd('autocmd!')
 
 vim.scriptencoding = 'utf-8'
 set.fileencoding = 'utf-8'
+set.spelllang = 'es,en'
 set.breakindent = true
 set.encoding = 'utf-8'
 vim.notify = require("notify")

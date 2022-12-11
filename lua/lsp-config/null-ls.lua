@@ -7,9 +7,6 @@ null_ls.setup {
       diagnostics_format = '[eslint_d] #{m}\n (#{c})'
     }),
     null_ls.builtins.code_actions.eslint,
-    null_ls.builtins.code_actions.cspell,
-    null_ls.builtins.diagnostics.cspell.with({
-      diagnostics_format = '[cspell] #{m}\n (#{c})'
-    })
+    null_ls.builtins.formatting.prettier,
   }
 }
