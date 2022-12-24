@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/xantx/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
+  ["luatab.nvim"] = {
+    loaded = true,
+    path = "/home/xantx/.local/share/nvim/site/pack/packer/start/luatab.nvim",
+    url = "https://github.com/alvarosevilla95/luatab.nvim"
+  },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
