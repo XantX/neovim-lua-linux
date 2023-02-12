@@ -16,3 +16,4 @@ map('n', '<leader>vs', ':vsp <CR>', opts)
 map('n', '<leader>nt', ':NvimTreeToggle <CR>', opts)
 
 map('n', '<leader>th', ':ToggleTerm direction=horizontal <CR>', opts)
+map('n', '<leader>h', ':Telescope help_tags<CR>', opts)
