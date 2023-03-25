@@ -38,6 +38,8 @@ return require('packer').startup(function(use)
 		  -- Snippets
 		  {'L3MON4D3/LuaSnip'},
 		  {'rafamadriz/friendly-snippets'},
+      {'SirVer/ultisnips'},
+      {'honza/vim-snippets'},
 	  }
   }
   use 'windwp/nvim-autopairs'
@@ -66,4 +68,5 @@ return require('packer').startup(function(use)
     "norcalli/nvim-colorizer.lua"
   }
   use {"folke/neodev.nvim"}
+  use "lervag/vimtex"
 end)

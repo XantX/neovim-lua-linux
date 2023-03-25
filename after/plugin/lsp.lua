@@ -6,7 +6,7 @@ lsp.preset('recommended')
 lsp.ensure_installed({
 	'tsserver',
 	'eslint',
-	'sumneko_lua',
+	'lua_ls',
 })
 lsp.set_preferences({
 	sign_icons = {}
@@ -30,3 +30,4 @@ lsp.setup()
 vim.diagnostic.config({
   virtual_text = true,
 })
+vim.opt.signcolumn='yes'
