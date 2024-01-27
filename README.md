@@ -1,0 +1,1 @@
+# Configuracion para linux
