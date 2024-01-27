@@ -16,7 +16,7 @@ return {
     },
     {
     "<leader>tv",
-    "<cmd>ToggleTerm direction=vertical <CR>",
+    "<cmd>ToggleTerm direction=vertical size=100 <CR>",
     desc = "Open terminal"
     },
     {
