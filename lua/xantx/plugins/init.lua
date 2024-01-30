@@ -29,4 +29,10 @@ return {
       vim.fn["mkdp#util#install"]()
     end,
   },
+  {
+    "j-hui/fidget.nvim",
+    opts = {
+      -- options
+    },
+  }
 }
