@@ -1,10 +1,12 @@
 return {
  "folke/trouble.nvim",
  dependencies = { "nvim-tree/nvim-web-devicons" },
+ keys = {
+   { '<leader>xx', function() require("trouble").toggle("document_diagnostics") end },
+   { '<leader>xq', function() require("trouble").toggle("quickfix") end },
+ },
  opts = {
    action_keys = { -- key mappings for actions in the trouble list
-          -- map to {} to remove a mapping, for example:
-          -- close = {},
           close = "q", -- close the list
           cancel = "<esc>", -- cancel the preview and get back to your last window / buffer / cursor
           refresh = "r", -- manually refresh

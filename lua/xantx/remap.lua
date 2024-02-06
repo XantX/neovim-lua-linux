@@ -16,6 +16,8 @@ map('n', '<M-l>', ':vertical resize +2<CR>', opts)
 map('n', '<leader>vs', ':vsp <CR>', opts)
 
 map('n', '<leader>h', ':Telescope help_tags<CR>', opts)
+map('n', '<leader>w', ':w<CR>', opts)
+map('n', '<leader>q', ':q<CR>', opts)
 
 map('n', '<leader>ne', ':bnext<CR>', opts)
 map('n', '<leader>pe', ':bprevious<CR>', opts)
