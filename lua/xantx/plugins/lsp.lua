@@ -19,8 +19,13 @@ return {
         "rust_analyzer"
       },
       handlers = {
-        function (server_name) -- default handler (optional)
+        function (server_name)
             require("lspconfig")[server_name].setup {}
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities.textDocument.completion.completionItem.snippetSupport = true
+            require'lspconfig'.cssls.setup {
+              capabilities = capabilities,
+            }
         end,
       }
     })

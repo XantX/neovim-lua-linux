@@ -1,5 +1,13 @@
 return {
   {
+    "L3MON4D3/LuaSnip",
+    dependencies = { "rafamadriz/friendly-snippets" },
+    build = "make install_jsregexp",
+    config = function ()
+      require("luasnip.loaders.from_vscode").lazy_load()
+    end
+  },
+  {
     'wakatime/vim-wakatime',
     event = "VeryLazy",
   },
@@ -13,7 +21,19 @@ return {
       fast_wrap = {},
     },
   },
-  'windwp/nvim-ts-autotag',
+  {
+    'windwp/nvim-ts-autotag',
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "html"
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
+  },
   {
       "kylechui/nvim-surround",
       version = "*",

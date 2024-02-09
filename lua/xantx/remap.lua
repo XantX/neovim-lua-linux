@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
-vim.keymap.set('v','J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v','K', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -22,3 +22,5 @@ map('n', '<leader>q', ':q<CR>', opts)
 map('n', '<leader>ne', ':bnext<CR>', opts)
 map('n', '<leader>pe', ':bprevious<CR>', opts)
 map('n', '<leader>e', ':bdelete<CR>', opts)
+
+map('n', '<leader>m', ':NoiceDismiss<CR>', opts)

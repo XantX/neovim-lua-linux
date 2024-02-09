@@ -20,10 +20,6 @@ return {
     lsp = {
       progress = {
         enabled = false,
-        format = "lsp_progress",
-        format_done = "lsp_progress_done",
-        throttle = 1000 / 30, -- frequency to update lsp progress message
-        view = "mini",
       },
       override = {
         ["vim.lsp.util.convert_input_to_markdown_lines"] = false,
